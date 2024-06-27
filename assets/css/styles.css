@@ -187,6 +187,12 @@ img {
   justify-content: space-between;
   align-items: center;
 }
+.site__logo,
+.nav__logo{
+  width: 40px;
+  height: 40px;
+  
+}
 
 .nav__logo,
 .nav__toggle{
@@ -1261,6 +1267,11 @@ img {
   .main,
   .footer__container{
     padding: 0;
+  }
+  .site__logo,
+  .nav__logo{
+    width: 60px;
+    height: 60px;
   }
 
   .home__blob{
