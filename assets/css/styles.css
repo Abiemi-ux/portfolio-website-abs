@@ -323,6 +323,20 @@ img {
   color: var(--text-color);
   font-weight: var(--font-medium);
   margin-bottom: var(--mb-0-75);
+  font-weight: bolder;
+}
+@keyframes vibrate {
+  0% { transform: translate(0, 0); }
+  20% { transform: translate(-1px, 1px); }
+  40% { transform: translate(1px, -1px); }
+  60% { transform: translate(-1px, -1px); }
+  80% { transform: translate(1px, 1px); }
+  100% { transform: translate(0, 0); }
+}
+
+/* Apply the vibration effect on hover */
+.home__title:hover {
+  animation: vibrate 0.2s linear infinite;
 }
 
 .home__description{
