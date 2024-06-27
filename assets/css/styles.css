@@ -766,8 +766,9 @@ img {
   right: -.5rem;
 }
 .swiper-container-horizontal > .swiper-pagination-bullets{
-  bottom: -3.5rem;
+  bottom: .5rem;
 }
+
 
 .swiper-pagination-bullet-active{
   background-color: var(--first-color);
