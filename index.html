@@ -885,6 +885,7 @@
 
         <!-- FORM JS -->
         <script>
+            const apiUrl = "https://contact-form.herokuapp.com";
             document.getElementById('contact-form').addEventListener('submit', function(event) {
                 event.preventDefault(); // Prevent the default form submission
         
@@ -895,7 +896,7 @@
                     message: document.getElementById('message').value
                 };
         
-                fetch('http://localhost:3001/send-email', {
+                fetch('http://${apiUrl}/send-email', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
