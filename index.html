@@ -896,7 +896,7 @@
                     message: document.getElementById('message').value
                 };
         
-                fetch('http://${apiUrl}/send-email', {
+                fetch('${apiUrl}/send-email', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
