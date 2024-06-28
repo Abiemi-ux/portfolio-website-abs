@@ -9,7 +9,11 @@ const cors = require('cors');
 
 const app = express();
 app.use(bodyParser.json());
-app.use(cors());
+app.use(cors({
+    origin: 'https://portfolio-abs.netlify.app',
+    methods: ['GET', 'POST'],
+    allowedHeaders: ['Content-Type'],
+}));
 
 app.post('/send-email', (req, res) => {
     const { name, email, project, message } = req.body;
