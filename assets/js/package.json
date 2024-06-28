@@ -1,0 +1,23 @@
+{
+  "name": "contact-form",
+  "version": "1.0.0",
+  "description": "A contact form process server",
+  "main": "server.js",
+  "scripts": {
+    "test": "node server.js",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Abiemi-ux/portfolio-website-abs.git"
+  },
+  "keywords": [
+    "[]"
+  ],
+  "author": "Brian Abiemi",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Abiemi-ux/portfolio-website-abs/issues"
+  },
+  "homepage": "https://github.com/Abiemi-ux/portfolio-website-abs#readme"
+}
