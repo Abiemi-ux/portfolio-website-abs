@@ -803,7 +803,7 @@
                             </div>
                         </div>
 
-                        <form id="contact-form" class="contact__form grid">
+                        <form action="POST" id="contact-form" class="contact__form grid">
                             <div class="contact__inputs grid">
                                 <div class="contact__content">
                                     <label for="name" class="contact__label">Name</label>
@@ -895,7 +895,7 @@
                     message: document.getElementById('message').value
                 };
         
-                fetch('http://localhost:5500/send-email', {
+                fetch('http://localhost:3001/send-email', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
