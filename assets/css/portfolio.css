@@ -29,7 +29,15 @@ nav ul li {
     display: inline;
     position: relative;
 }
+.dropbtn{
+    background-color: #fff;
+    color: #333;
+    cursor: pointer;
 
+}
+.arrow__down:hover{
+    transform: translateY(.25rem);
+}
 nav a {
     text-decoration: none;
     color: #fff;
