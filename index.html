@@ -297,7 +297,7 @@
                              <div class="skills__data">
                                  <div class="skills__titles">
                                      <h3 class="skill__name">Figma</h3>
-                                     <span class="skills__number">60%</span>
+                                     <span class="skills__number">70%</span>
                                  </div>
                                  <div class="skills__bar">
                                      <span class="skills__percentage skills__figma"></span>
@@ -306,8 +306,8 @@
  
                              <div class="skills__data">
                                  <div class="skills__titles">
-                                     <h3 class="skill__name">Sketch</h3>
-                                     <span class="skills__number">70%</span>
+                                     <h3 class="skill__name">Illustrator</h3>
+                                     <span class="skills__number">80%</span>
                                  </div>
                                  <div class="skills__bar">
                                      <span class="skills__percentage skills__sketch"></span>
@@ -317,7 +317,7 @@
                              <div class="skills__data">
                                  <div class="skills__titles">
                                      <h3 class="skill__name">Photoshop</h3>
-                                     <span class="skills__number">70%</span>
+                                     <span class="skills__number">90%</span>
                                  </div>
                                  <div class="skills__bar">
                                      <span class="skills__percentage skills__photoshop"></span>
@@ -885,18 +885,17 @@
 
         <!-- FORM JS -->
         <script>
-            const apiUrl = "https://git.heroku.com/contact-form.git";
             document.getElementById('contact-form').addEventListener('submit', function(event) {
                 event.preventDefault(); // Prevent the default form submission
-        
+    
                 const formData = {
                     name: document.getElementById('name').value,
                     email: document.getElementById('email').value,
                     project: document.getElementById('project').value,
                     message: document.getElementById('message').value
                 };
-        
-                fetch('${apiUrl}/send-email', {
+    
+                fetch('http://localhost:3001/send-email', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
