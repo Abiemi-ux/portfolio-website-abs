@@ -6,85 +6,110 @@
     <title>Graphic Design Portfolio</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+    <style>
+        .fade-in {
+            animation: fadeIn 0.5s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        /* Hover scale effect for images */
+        .hover-scale:hover {
+            transform: translateY(-10px) scale(1.05);
+            transition: transform 0.3s ease;
+        }
+    </style>
 </head>
-<body class="bg-gray-50 text-gray-800">
-    <header class="bg-white shadow-md p-4 flex flex-col items-center">
-        <a href="index.html" class="flex items-center mb-4">
+<body class="bg-gray-900 text-gray-200">
+    <!-- Header -->
+    <header class="bg-gray-800 shadow-md p-4 flex flex-col items-center">
+        <a href="index.html" class="flex items-center mb-2">
             <img src="assets/img/AB-2.png" alt="Logo" class="h-12 w-12">
-            <h1 class="text-2xl font-bold ml-2">Brand Design</h1>
+            <h1 class="text-2xl font-bold text-gray-100 ml-2">Brand Design</h1>
         </a>
-        <nav>
-            <div class="relative group">
-                <button class="bg-gray-800 text-white px-6 py-2 rounded font-semibold flex items-center">
-                    Categories <i class="uil uil-arrow-circle-down ml-2"></i>
-                </button>
-                <ul class="absolute hidden group-hover:block bg-white shadow-lg rounded mt-2 w-full text-center">
-                    <li><a href="#posters" data-category="posters" class="block px-4 py-2 hover:bg-gray-200">Posters</a></li>
-                    <li><a href="#webdesign" data-category="webdesign" class="block px-4 py-2 hover:bg-gray-200">Web Design</a></li>
-                    <li><a href="#printdesign" data-category="printdesign" class="block px-4 py-2 hover:bg-gray-200">Print Design</a></li>
-                    <li><a href="#illustrations" data-category="illustrations" class="block px-4 py-2 hover:bg-gray-200">Illustrations</a></li>
-                </ul>
-            </div>
-        </nav>
     </header>
 
+    <!-- Tabs -->
+    <nav class="bg-gray-700 shadow-md">
+        <div class="container mx-auto flex justify-center space-x-4 border-b border-gray-600">
+            <button data-tab="posters" class="tab-button px-4 py-2 text-gray-200 hover:text-white border-b-4 border-transparent transition duration-300">
+                Posters
+            </button>
+            <button data-tab="webdesign" class="tab-button px-4 py-2 text-gray-200 hover:text-white border-b-4 border-transparent transition duration-300">
+                Logos
+            </button>
+            <button data-tab="printdesign" class="tab-button px-4 py-2 text-gray-200 hover:text-white border-b-4 border-transparent transition duration-300">
+                Print Design
+            </button>
+            <button data-tab="illustrations" class="tab-button px-4 py-2 text-gray-200 hover:text-white border-b-4 border-transparent transition duration-300">
+                Illustrations
+            </button>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
     <main class="container mx-auto p-6">
         <!-- Posters Section -->
-        <section id="posters" class="block">
-            <h2 class="text-3xl font-semibold mb-4">Posters</h2>
+        <section id="posters" class="tab-content fade-in block">
+            <h2 class="text-3xl font-semibold mb-4 text-gray-100">Posters</h2>
             <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-                <img src="/assets/img/webp/product%20ad.webp" alt="Branding Work" class="rounded shadow">
-                <img src="/assets/img/webp/testimonial.webp" alt="Branding Work" class="rounded shadow">
-                <img src="/assets/img/webp/KCY%20Social%20Sunday.webp" alt="Branding Work" class="rounded shadow">
-                <img src="/assets/img/webp/Abiemi%20Design3.webp" alt="Branding Work" class="rounded shadow">
-                <img src="/assets/img/webp/Kucasa%20rally%201.webp" alt="Branding Work" class="rounded shadow">
-                <img src="/assets/img/webp/AB%20New.webp" alt="Branding Work" class="rounded shadow">
-                <img src="/assets/img/webp/Camp%20Meeting%20eusda1.webp" alt="Branding Work" class="rounded shadow">
-                <img src="/assets/img/webp/Camp%20out%20kcc.webp" alt="Branding Work" class="rounded shadow">
-                <img src="/assets/img/webp/Nature%20sabbath%202.webp" alt="Branding Work" class="rounded shadow">
-                <img src="/assets/img/webp/Main-Tickets-1843x2048.webp" alt="Branding Work" class="rounded shadow">
-                <img src="/assets/img/webp/PCM%20Day.webp" alt="Branding Work" class="rounded shadow">
-                <img src="/assets/img/webp/Retreat%202024%20v1.webp" alt="Branding Work" class="rounded shadow">
-                <img src="/assets/img/webp/sing-2.webp" alt="Branding Work" class="rounded shadow">
-                <img src="/assets/img/webp/Soul-Sisters-1843x2048.webp" alt="Branding Work" class="rounded shadow">
-                <img src="/assets/img/webp/Vespers-July-7-Gold.webp" alt="Branding Work" class="rounded shadow">
-                <img src="/assets/img/webp/WeekOfPrayer.webp" alt="Branding Work" class="rounded shadow">
-                <img src="/assets/img/webp/WhatsApp-Image-2023-12-21-at-9.53.31-PM.webp" alt="Branding Work" class="rounded shadow">
+                <img src="/assets/img/webp/product%20ad.webp" alt="Branding Work" class="rounded shadow-lg hover-scale">
+                <img src="/assets/img/webp/testimonial.webp" alt="Branding Work" class="rounded shadow-lg hover-scale">
+                <img src="/assets/img/webp/KCY%20Social%20Sunday.webp" alt="Branding Work" class="rounded shadow-lg hover-scale">
+                <img src="/assets/img/webp/Abiemi%20Design3.webp" alt="Branding Work" class="rounded shadow-lg hover-scale">
+                <img src="/assets/img/webp/Kucasa%20rally%201.webp" alt="Branding Work" class="rounded shadow-lg hover-scale">
+                <img src="/assets/img/webp/AB%20New.webp" alt="Branding Work" class="rounded shadow-lg hover-scale">
             </div>
         </section>
 
         <!-- Other Sections -->
-        <section id="webdesign" class="hidden">
-            <h2 class="text-3xl font-semibold mb-4">Web Design</h2>
-            <p class="text-gray-500">Uploading...</p>
+        <section id="webdesign" class="tab-content hidden fade-in">
+            <h2 class="text-3xl font-semibold mb-4 text-gray-100">Logos</h2>
+            <p class="text-gray-400">Uploading...</p>
         </section>
-        <section id="printdesign" class="hidden">
-            <h2 class="text-3xl font-semibold mb-4">Print Design</h2>
-            <p class="text-gray-500">Uploading...</p>
+        <section id="printdesign" class="tab-content hidden fade-in">
+            <h2 class="text-3xl font-semibold mb-4 text-gray-100">Print Design</h2>
+            <p class="text-gray-400">Uploading...</p>
         </section>
-        <section id="illustrations" class="hidden">
-            <h2 class="text-3xl font-semibold mb-4">Illustrations</h2>
-            <p class="text-gray-500">Uploading...</p>
+        <section id="illustrations" class="tab-content hidden fade-in">
+            <h2 class="text-3xl font-semibold mb-4 text-gray-100">Illustrations</h2>
+            <p class="text-gray-400">Uploading...</p>
         </section>
     </main>
 
     <script>
         document.addEventListener("DOMContentLoaded", () => {
-            const links = document.querySelectorAll("[data-category]");
-            const sections = document.querySelectorAll("section");
+            const tabButtons = document.querySelectorAll(".tab-button");
+            const tabContents = document.querySelectorAll(".tab-content");
 
-            links.forEach(link => {
-                link.addEventListener("click", event => {
-                    event.preventDefault();
+            tabButtons.forEach((button, index) => {
+                button.addEventListener("click", () => {
+                    // Reset all buttons and hide all sections
+                    tabButtons.forEach(btn => {
+                        btn.classList.remove("border-gray-100", "text-white");
+                        btn.classList.add("text-gray-200", "border-transparent");
+                    });
+                    tabContents.forEach(content => content.classList.add("hidden"));
 
-                    sections.forEach(section => section.classList.add("hidden"));
-                    const targetId = link.getAttribute("data-category");
-                    document.getElementById(targetId).classList.remove("hidden");
+                    // Activate clicked tab and show corresponding section
+                    button.classList.remove("text-gray-200", "border-transparent");
+                    button.classList.add("border-gray-100", "text-white");
+                    const targetTab = button.getAttribute("data-tab");
+                    document.getElementById(targetTab).classList.remove("hidden");
                 });
-            });
 
-            // Default view
-            document.getElementById("posters").classList.remove("hidden");
+                // Set the first tab as active on load
+                if (index === 0) {
+                    button.classList.add("border-gray-100", "text-white");
+                }
+            });
         });
     </script>
 </body>
