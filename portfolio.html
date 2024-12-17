@@ -7,6 +7,17 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap');
+
+        body {
+            background-color: #1a1a1a;
+            color: #e5e7eb;
+        }
+
+        h1, h2, button {
+            font-family: 'Proxima Nova', serif;
+        }
+
         .fade-in {
             animation: fadeIn 0.5s ease-in-out;
         }
@@ -20,14 +31,46 @@
             }
         }
 
-        /* Hover scale effect for images */
+        /* Hover scale effect for images with subtle border and shadow */
+        .hover-scale {
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            transition: all 0.3s ease;
+        }
+
         .hover-scale:hover {
             transform: translateY(-10px) scale(1.05);
-            transition: transform 0.3s ease;
+        }
+
+        /* Tab styling */
+        .tab-button {
+            color: #e5e7eb;
+            border-bottom: 4px solid transparent;
+            transition: all 0.3s ease;
+        }
+
+        .tab-button:hover, .tab-button.active {
+            color: #8B5CF6;
+            border-color: #8B5CF6;
+        }
+
+        /* Tab content transitions */
+        .tab-content {
+            transition: opacity 0.3s ease-out;
+        }
+
+        .tab-content.hidden {
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        .tab-content:not(.hidden) {
+            opacity: 1;
+            pointer-events: auto;
         }
     </style>
 </head>
-<body class="bg-gray-900 text-gray-200">
+<body class="text-gray-200">
     <!-- Header -->
     <header class="bg-gray-800 shadow-md p-4 flex flex-col items-center">
         <a href="index.html" class="flex items-center mb-2">
@@ -39,16 +82,16 @@
     <!-- Tabs -->
     <nav class="bg-gray-700 shadow-md">
         <div class="container mx-auto flex justify-center space-x-4 border-b border-gray-600">
-            <button data-tab="posters" class="tab-button px-4 py-2 text-gray-200 hover:text-white border-b-4 border-transparent transition duration-300">
+            <button data-tab="posters" class="tab-button px-4 py-2 text-gray-200 border-b-4 border-transparent transition duration-300">
                 Posters
             </button>
-            <button data-tab="webdesign" class="tab-button px-4 py-2 text-gray-200 hover:text-white border-b-4 border-transparent transition duration-300">
+            <button data-tab="webdesign" class="tab-button px-4 py-2 text-gray-200 border-b-4 border-transparent transition duration-300">
                 Logos
             </button>
-            <button data-tab="printdesign" class="tab-button px-4 py-2 text-gray-200 hover:text-white border-b-4 border-transparent transition duration-300">
+            <button data-tab="printdesign" class="tab-button px-4 py-2 text-gray-200 border-b-4 border-transparent transition duration-300">
                 Print Design
             </button>
-            <button data-tab="illustrations" class="tab-button px-4 py-2 text-gray-200 hover:text-white border-b-4 border-transparent transition duration-300">
+            <button data-tab="illustrations" class="tab-button px-4 py-2 text-gray-200 border-b-4 border-transparent transition duration-300">
                 Illustrations
             </button>
         </div>
@@ -60,12 +103,12 @@
         <section id="posters" class="tab-content fade-in block">
             <h2 class="text-3xl font-semibold mb-4 text-gray-100">Posters</h2>
             <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-                <img src="/assets/img/webp/product%20ad.webp" alt="Branding Work" class="rounded shadow-lg hover-scale">
-                <img src="/assets/img/webp/testimonial.webp" alt="Branding Work" class="rounded shadow-lg hover-scale">
-                <img src="/assets/img/webp/KCY%20Social%20Sunday.webp" alt="Branding Work" class="rounded shadow-lg hover-scale">
-                <img src="/assets/img/webp/Abiemi%20Design3.webp" alt="Branding Work" class="rounded shadow-lg hover-scale">
-                <img src="/assets/img/webp/Kucasa%20rally%201.webp" alt="Branding Work" class="rounded shadow-lg hover-scale">
-                <img src="/assets/img/webp/AB%20New.webp" alt="Branding Work" class="rounded shadow-lg hover-scale">
+                <img src="/assets/img/webp/product%20ad.webp" alt="Branding Work" class="rounded hover-scale">
+                <img src="/assets/img/webp/testimonial.webp" alt="Branding Work" class="rounded hover-scale">
+                <img src="/assets/img/webp/KCY%20Social%20Sunday.webp" alt="Branding Work" class="rounded hover-scale">
+                <img src="/assets/img/webp/Abiemi%20Design3.webp" alt="Branding Work" class="rounded hover-scale">
+                <img src="/assets/img/webp/Kucasa%20rally%201.webp" alt="Branding Work" class="rounded hover-scale">
+                <img src="/assets/img/webp/AB%20New.webp" alt="Branding Work" class="rounded hover-scale">
             </div>
         </section>
 
@@ -73,12 +116,12 @@
         <section id="webdesign" class="tab-content hidden fade-in">
             <h2 class="text-3xl font-semibold mb-4 text-gray-100">Logos</h2>
             <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-                <img src="/assets/img/logo webp/Silhouette.webp" alt="Branding Work" class="rounded shadow-lg hover-scale">
-                <img src="/assets/img/logo webp/pris logo eggplant.webp" alt="Branding Work" class="rounded shadow-lg hover-scale">
-                <img src="/assets/img/logo webp/RVOP Logo.webp" alt="Branding Work" class="rounded shadow-lg hover-scale">
-                <img src="/assets/img/logo webp/concept 2.webp" alt="Branding Work" class="rounded shadow-lg hover-scale">
-                <img src="/assets/img/logo webp/v3.webp" alt="Branding Work" class="rounded shadow-lg hover-scale">
-                <img src="/assets/img/logo webp/rvp.webp" alt="Branding Work" class="rounded shadow-lg hover-scale">
+                <img src="/assets/img/logo webp/Silhouette.webp" alt="Branding Work" class="rounded hover-scale">
+                <img src="/assets/img/logo webp/pris logo eggplant.webp" alt="Branding Work" class="rounded hover-scale">
+                <img src="/assets/img/logo webp/RVOP Logo.webp" alt="Branding Work" class="rounded hover-scale">
+                <img src="/assets/img/logo webp/concept 2.webp" alt="Branding Work" class="rounded hover-scale">
+                <img src="/assets/img/logo webp/v3.webp" alt="Branding Work" class="rounded hover-scale">
+                <img src="/assets/img/logo webp/rvp.webp" alt="Branding Work" class="rounded hover-scale">
             </div>
         </section>
         <section id="printdesign" class="tab-content hidden fade-in">
@@ -100,21 +143,21 @@
                 button.addEventListener("click", () => {
                     // Reset all buttons and hide all sections
                     tabButtons.forEach(btn => {
-                        btn.classList.remove("border-gray-100", "text-white");
+                        btn.classList.remove("active");
                         btn.classList.add("text-gray-200", "border-transparent");
                     });
                     tabContents.forEach(content => content.classList.add("hidden"));
 
                     // Activate clicked tab and show corresponding section
                     button.classList.remove("text-gray-200", "border-transparent");
-                    button.classList.add("border-gray-100", "text-white");
+                    button.classList.add("active");
                     const targetTab = button.getAttribute("data-tab");
                     document.getElementById(targetTab).classList.remove("hidden");
                 });
 
                 // Set the first tab as active on load
                 if (index === 0) {
-                    button.classList.add("border-gray-100", "text-white");
+                    button.classList.add("active");
                 }
             });
         });
